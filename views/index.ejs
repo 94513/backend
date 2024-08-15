@@ -1,0 +1,12 @@
+<h1>Pizza Store</h1>
+<a href="/pizzas/new">Add New Pizza</a>
+<ul>
+    <% pizzas.forEach(pizza => { %>
+        <li>
+            <a href="/pizzas/<%= pizza._id %>"><%= pizza.name %> - <%= pizza.size %></a>
+            <form action="/pizzas/<%= pizza._id %>?_method=DELETE" method="POST">
+                <button>Delete</button>
+            </form>
+        </li>
+    <% }) %>
+</ul>

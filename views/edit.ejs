@@ -1,0 +1,12 @@
+<h1>Edit <%= pizza.name %></h1>
+<form action="/pizzas/<%= pizza._id %>?_method=PUT" method="POST">
+    <label>Name:</label>
+    <input type="text" name="pizza[name]" value="<%= pizza.name %>"><br>
+    <label>Size:</label>
+    <input type="text" name="pizza[size]" value="<%= pizza.size %>"><br>
+    <label>Price:</label>
+    <input type="number" name="pizza[price]" value="<%= pizza.price %>"><br>
+    <label>Ingredients:</label>
+    <input type="text" name="pizza[ingredients]" value="<%= pizza.ingredients.join(', ') %>"><br>
+    <button type="submit">Update Pizza</button>
+</form>

@@ -1,0 +1,6 @@
+<h1><%= pizza.name %></h1>
+<p>Size: <%= pizza.size %></p>
+<p>Price: <%= pizza.price %></p>
+<p>Ingredients: <%= pizza.ingredients.join(', ') %></p>
+<a href="/pizzas/<%= pizza._id %>/edit">Edit Pizza</a>
+<a href="/pizzas">Back to All Pizzas</a>
